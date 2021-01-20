@@ -5,11 +5,14 @@ export default function Header() {
     <>
       <header className="header">
         <nav className="nav" role="navigation" aria-label="main navigation">
-          <Link href="/">
-            <a>Demo Blog</a>
-          </Link>
-          <Link href="/about">
-            <a>About</a>
+          <Link href="https://daniilo.dev">
+            <span>
+            <img
+                src="/images/profile.jpg"
+                alt="Danilo Mello"
+              />{' '}
+              Danilo Mello
+            </span>
           </Link>
         </nav>
       </header>
@@ -17,7 +20,6 @@ export default function Header() {
         header {
           width: 100%;
           height: 100px;
-          border-bottom: 1px solid #eaeaea;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -25,16 +27,32 @@ export default function Header() {
         nav {
           width: calc(100% - 40px);
           max-width: 1200px;
-          font-weight: bold;
-          font-size: 1.3rem;
+          font-size: 1rem;
         }
         nav a {
           margin-right: 20px;
-          color: #00a395;
+          color: #64FFDA;
           text-decoration: none;
         }
         nav a:hover {
           text-decoration: underline;
+        }
+        nav img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+        }
+        nav span {
+          width: 220px;
+          display: grid;
+          grid-template-columns: 70px 1fr;
+          align-items: center;
+          transition: all 0.5s ease;
+        }
+        nav span:hover {
+          transform: translateY(-10px);
+          transition: all 0.5s ease;
+          cursor: pointer;
         }
       `}</style>
     </>

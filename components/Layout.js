@@ -12,16 +12,43 @@ export default function Layout({ children, pageTitle, description, ...props }) {
         <title>{pageTitle}</title>
       </Head>
       <style jsx global>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
 
         html,
         body {
           margin: 0;
           padding: 0;
-          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+          background: #0a192f;
+          color: #cad6f6;
+          padding: 30px 90px;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI',
             Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
             sans-serif;
-          color: #445566;
+          letter-spacing: 0.2px;
+          box-sizing: border-box;
+        }
+
+        @media (max-width: 62.5rem) {
+          body {
+            padding: 25px 25px 25px 43px;
+          }
+        }
+        p {
+          line-height: 1.7;
+        }
+        
+        ul {
+          list-style-type: none;
+        }
+        
+        a{
+          text-decoration: none;
+        }
+        
+        .wrapper{
+          max-width: 900px;
+          margin: 0 auto;
         }
 
         h1,
@@ -34,7 +61,7 @@ export default function Layout({ children, pageTitle, description, ...props }) {
         }
 
         a {
-          color: #00a395;
+          color: #64FFDA;
         }
 
         .content {
@@ -49,7 +76,6 @@ export default function Layout({ children, pageTitle, description, ...props }) {
         footer {
           width: 100%;
           height: 100px;
-          border-top: 1px solid #eaeaea;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -64,9 +90,6 @@ export default function Layout({ children, pageTitle, description, ...props }) {
         <Header />
         <div className="content">{children}</div>
       </section>
-      <footer>
-        Built with <img src="/netliheart.svg" alt="Netlify Heart" /> for you
-      </footer>
     </>
   )
 }

@@ -14,7 +14,7 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
         <div className="back">
           ←{' '}
           <Link href="/">
-            <a>Back to post list</a>
+            <a>Voltar para lista de posts</a>
           </Link>
         </div>
         <article>
@@ -38,9 +38,14 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
         }
         h1 {
           font-size: 3rem;
+          color: #fefefe;
+        }
+        h2{
+          color: #fefefe;
         }
         h3 {
           font-size: 2rem;
+          color: #fefefe;
         }
         .hero {
           width: 100%;
