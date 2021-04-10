@@ -33,12 +33,17 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
       </Layout>
       <style jsx>{`
         article {
-          width: 100%;
-          max-width: 1200px;
+          width: 700px;
+          max-width: 100%;
         }
         h1 {
           font-size: 3rem;
           color: #fefefe;
+        }
+        @media (max-width: 62.5rem) {
+          h1{
+            font-size: 1.8rem;
+          }
         }
         h2{
           color: #fefefe;

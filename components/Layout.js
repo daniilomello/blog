@@ -31,7 +31,11 @@ export default function Layout({ children, pageTitle, description, ...props }) {
 
         @media (max-width: 62.5rem) {
           body {
-            padding: 25px 25px 25px 43px;
+            padding: 10px;
+          }
+
+          html {
+            padding: 0;
           }
         }
         p {
@@ -47,7 +51,8 @@ export default function Layout({ children, pageTitle, description, ...props }) {
         }
         
         .wrapper{
-          max-width: 900px;
+          width: 900px;
+          max-width: 100%;
           margin: 0 auto;
         }
 
@@ -84,6 +89,33 @@ export default function Layout({ children, pageTitle, description, ...props }) {
         footer img {
           padding: 0 5px;
           height: 1rem;
+        }
+
+        article p,
+        article li {
+          font-size: 1.5rem;
+        }
+
+        article ul {
+          list-style-type: initial;
+        }
+        article li{
+          margin-bottom: 20px;
+        }
+
+        article h1 {
+          font-size: 1.6rem;
+        }
+
+        @media (max-width: 62.5rem) {
+          article p,
+          article li {
+            font-size: 1rem;
+          }
+
+          article li{
+            margin-bottom: 7px;
+          }
         }
       `}</style>
       <section className="layout">
